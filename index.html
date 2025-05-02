@@ -28,7 +28,7 @@
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(255, 240, 245, 0.88);
+      background: rgba(255, 183, 212, 0.88); /* Restored original pink */
       z-index: 0;
     }
 
@@ -45,7 +45,7 @@
       text-align: center;
       margin-bottom: 10px;
       font-size: 3em;
-      color: #c56c9d;
+      color: #c56c9d; /* Restored original pink */
     }
 
     p.subtitle {
@@ -91,7 +91,7 @@
       font-weight: bold;
     }
 
-    form input, form textarea {
+    form input, form select, form textarea {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
@@ -174,7 +174,12 @@
         <input type="email" name="email" required/>
 
         <label for="service">Service</label>
-        <input type="text" name="service" required/>
+        <select name="service" required>
+          <option value="Hair Braiding & Extensions">Hair Braiding & Extensions</option>
+          <option value="Microblading">Microblading</option>
+          <option value="Eyelash Extensions">Eyelash Extensions</option>
+          <option value="Manicure">Manicure</option>
+        </select>
 
         <label for="date">Preferred Date</label>
         <input type="date" name="date" required/>
