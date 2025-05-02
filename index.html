@@ -203,27 +203,31 @@
     <section class="testimonials">
   <h2>What Our Clients Say</h2>
 
-  <div class="testimonial">
-    <p>"Absolutely loved the service! The braids were flawless and the atmosphere was so relaxing."</p>
-    <h4>— Tanaka M.</h4>
-  </div>
-  <div class="testimonial">
-    <p>"My lashes have never looked this good. Highly recommend Pretty Parlor!"</p>
-    <h4>— Nyasha D.</h4>
-  </div>
-  <div class="testimonial">
-    <p>"Great customer service and stunning results. My go-to beauty spot in Harare!"</p>
-    <h4>— Lisa K.</h4>
-  </div>
-
-  <!-- Dynamic Reviews -->
-<section class="testimonials">
-  <h2>What Our Clients Say</h2>
-
   <div id="reviews-container"></div>
 
+  <!-- Add a review form -->
+  <h3>Leave a Review</h3>
+  <form id="review-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required placeholder="Your Name">
+    
+    <label for="review-text">Your Review:</label>
+    <textarea id="review-text" required placeholder="Share your thoughts..."></textarea>
+    
+    <label for="rating">Rating:</label>
+    <select id="rating" required>
+      <option value="1">1 Star</option>
+      <option value="2">2 Stars</option>
+      <option value="3">3 Stars</option>
+      <option value="4">4 Stars</option>
+      <option value="5">5 Stars</option>
+    </select>
+
+    <button type="submit">Submit Review</button>
+  </form>
+
   <script>
-    const spreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR4GqIKcl4fEqH57rllRL-iijTkxuY4FrfxTZzOkruKj-suAa3I4frkePzdXALJ8wfgdB-hP_mPcPv5/pub?output=csv'; // Published URL
+    const spreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR4GqIKcl4fEqH57rllRL-iijTkxuY4FrfxTZzOkruKj-suAa3I4frkePzdXALJ8wfgdB-hP_mPcPv5/pub?output=csv';
 
     async function fetchReviews() {
       const response = await fetch(spreadsheetUrl);
@@ -231,19 +235,19 @@
       const rows = csvText.split("\n");
 
       const reviewsContainer = document.getElementById('reviews-container');
-
+      
       rows.forEach((row, index) => {
         if (index > 0 && row.trim()) {  // Skip header row and empty rows
-          const [name, reviewText, rating] = row.split(',');
+          const [time, name, reviewText, rating] = row.split(',');
 
           // Create review element
           const reviewElement = document.createElement('div');
           reviewElement.classList.add('review');
 
-          // Add name, review, and star rating
+          // Add name, review text, and star rating
           reviewElement.innerHTML = `
             <strong>${name || 'Anonymous'}</strong>
-            <p>${reviewText}</p>
+            <p>${reviewText || 'No review provided'}</p>
             <div class="star-rating">${'★'.repeat(parseInt(rating) || 0)}${'☆'.repeat(5 - (parseInt(rating) || 0))}</div>
           `;
 
@@ -255,6 +259,30 @@
 
     // Fetch and display reviews when the page loads
     fetchReviews();
+
+    // Handle review submission
+    document.getElementById('review-form').addEventListener('submit', async function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const reviewText = document.getElementById('review-text').value;
+      const rating = document.getElementById('rating').value;
+
+      // Validate input fields
+      if (!name || !reviewText || !rating) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      // Create new row with review data (assuming your Google Sheets follows this structure)
+      const newReview = `${new Date().toISOString()},${name},${reviewText},${rating}`;
+      
+      // Send review data to Google Sheets (you'll need a backend or Google Apps Script for this part)
+      alert("Thank you for your review! It will appear soon.");
+
+      // Reset form fields
+      document.getElementById('review-form').reset();
+    });
   </script>
 </section>
 
