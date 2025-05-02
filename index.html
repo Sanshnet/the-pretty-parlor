@@ -275,6 +275,12 @@
         return;
       }
 
+      const data = {
+      name: name,
+      review: reviewText,
+      rating: rating
+    };
+
       // Create new row with review data (assuming your Google Sheets follows this structure)
       const newReview = `${new Date().toISOString()},${name},${reviewText},${rating}`;
       
