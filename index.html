@@ -8,9 +8,22 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <div id="root">
-    <h1>Welcome to The Pretty Parlor</h1>
-    <p>Beauty service bookings made simple.</p>
+  <header>
+    <h1>The Pretty Parlor</h1>
+    <p>Your destination for flawless beauty and self-care.</p>
+  </header>
+
+  <section class="hero">
+    <img src="assets/images/beauty-salon.jpg" alt="Beauty Salon Interior" />
+  </section>
+
+  <section class="intro">
+    <h2>Our Services</h2>
+    <p>From facials and waxing to bridal makeup and lash extensions, we offer professional beauty services tailored to your needs — all payable in cash at your convenience.</p>
+  </section>
+
+  <section class="form-section">
+    <h2>Book an Appointment</h2>
     <form action="https://formsubmit.co/patiesango92@gmail.com" method="POST">
       <input type="hidden" name="_captcha" value="false">
       <label>Name: <input type="text" name="name" required></label><br>
@@ -18,6 +31,10 @@
       <label>Service: <input type="text" name="service" required></label><br>
       <button type="submit">Book Now</button>
     </form>
-  </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 The Pretty Parlor. All rights reserved.</p>
+  </footer>
 </body>
 </html>
