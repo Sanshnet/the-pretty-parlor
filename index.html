@@ -202,6 +202,74 @@
 
     <section class="testimonials">
       <h2>What Our Clients Say</h2>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <style>
+        .review {
+            border: 1px solid #eee;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+        .star-rating {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Customer Reviews</h2>
+
+<div id="reviews-container"></div>
+
+<script>
+// Google Sheets API details
+const apiKey = 'AIzaSyCebr5c21dnjH6-8mQHzMLOyinowBVjWQ4';  // Replace with your API key
+const spreadsheetId = 'https://docs.google.com/spreadsheets/d/1ui6pDSojEe03--9GggTFoBO_MITIAq3WTXJOFRJfbM0/edit?usp=drivesdk';  // Replace with your Google Sheet ID
+const range = 'Sheet1!A2:C';  // Sheet range to fetch reviews (starting from row 2)
+
+async function fetchReviews() {
+    const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?key=${apiKey}`;
+    const response = await fetch(url);
+    const data = await response.json();
+
+    const reviews = data.values;
+
+    const reviewsContainer = document.getElementById('reviews-container');
+
+    reviews.forEach((review) => {
+        const name = review[0] || 'Anonymous';
+        const reviewText = review[1];
+        const rating = parseInt(review[2]);
+
+        // Create review element
+        const reviewElement = document.createElement('div');
+        reviewElement.classList.add('review');
+
+        // Add name and review
+        reviewElement.innerHTML = `
+            <strong>${name}</strong>
+            <p>${reviewText}</p>
+            <div class="star-rating">${'★'.repeat(rating)}${'☆'.repeat(5 - rating)}</div>
+        `;
+
+        // Append to the container
+        reviewsContainer.appendChild(reviewElement);
+    });
+}
+
+// Fetch reviews on page load
+fetchReviews();
+</script>
+
+</body>
+</html>
+      
       <div class="testimonial">
         <p>"Absolutely loved the service! The braids were flawless and the atmosphere was so relaxing."</p>
         <h4>— Tanaka M.</h4>
