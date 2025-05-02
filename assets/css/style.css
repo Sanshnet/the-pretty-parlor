@@ -1,0 +1,43 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff0f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #c71585;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.intro {
+  padding: 20px;
+  text-align: center;
+}
+.form-section {
+  background-color: #ffe4ec;
+  padding: 20px;
+  text-align: center;
+}
+form input, form button {
+  margin: 10px 0;
+  padding: 10px;
+  width: 80%;
+  max-width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+footer {
+  background-color: #c71585;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
