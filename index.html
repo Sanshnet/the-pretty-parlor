@@ -201,88 +201,69 @@
     </section>
 
     <section class="testimonials">
-      <h2>What Our Clients Say</h2>
+  <h2>What Our Clients Say</h2>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reviews</title>
-    <style>
-        .review {
-            border: 1px solid #eee;
-            padding: 20px;
-            margin: 10px;
-            border-radius: 8px;
-        }
-        .star-rating {
-            color: gold;
-        }
-    </style>
-</head>
-<body>
+  <div class="testimonial">
+    <p>"Absolutely loved the service! The braids were flawless and the atmosphere was so relaxing."</p>
+    <h4>— Tanaka M.</h4>
+  </div>
+  <div class="testimonial">
+    <p>"My lashes have never looked this good. Highly recommend Pretty Parlor!"</p>
+    <h4>— Nyasha D.</h4>
+  </div>
+  <div class="testimonial">
+    <p>"Great customer service and stunning results. My go-to beauty spot in Harare!"</p>
+    <h4>— Lisa K.</h4>
+  </div>
 
-<h2>Customer Reviews</h2>
+  <!-- Dynamic Reviews -->
+  <div id="reviews-container"></div>
+</section>
 
-<div id="reviews-container"></div>
-
+<!-- Tabletop.js Script -->
+<script src="https://unpkg.com/tabletop@1.6.0/tabletop.js"></script>
 <script>
-// Google Sheets API details
-const apiKey = 'AIzaSyCebr5c21dnjH6-8mQHzMLOyinowBVjWQ4';  // Replace with your API key
-const spreadsheetId = 'https://docs.google.com/spreadsheets/d/1ui6pDSojEe03--9GggTFoBO_MITIAq3WTXJOFRJfbM0/edit?usp=drivesdk';  // Replace with your Google Sheet ID
-const range = 'Sheet1!A2:C';  // Sheet range to fetch reviews (starting from row 2)
+  function showReviews(data) {
+    const container = document.getElementById('reviews-container');
+    data.forEach(entry => {
+      const name = entry.Name || 'Anonymous';
+      const reviewText = entry.Review || '';
+      const rating = parseInt(entry.Rating) || 0;
 
-async function fetchReviews() {
-    const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?key=${apiKey}`;
-    const response = await fetch(url);
-    const data = await response.json();
-
-    const reviews = data.values;
-
-    const reviewsContainer = document.getElementById('reviews-container');
-
-    reviews.forEach((review) => {
-        const name = review[0] || 'Anonymous';
-        const reviewText = review[1];
-        const rating = parseInt(review[2]);
-
-        // Create review element
-        const reviewElement = document.createElement('div');
-        reviewElement.classList.add('review');
-
-        // Add name and review
-        reviewElement.innerHTML = `
-            <strong>${name}</strong>
-            <p>${reviewText}</p>
-            <div class="star-rating">${'★'.repeat(rating)}${'☆'.repeat(5 - rating)}</div>
-        `;
-
-        // Append to the container
-        reviewsContainer.appendChild(reviewElement);
+      const review = document.createElement('div');
+      review.className = 'testimonial';
+      review.innerHTML = `
+        <p>"${reviewText}"</p>
+        <h4>— ${name}</h4>
+        <div class="star-rating">${'★'.repeat(rating)}${'☆'.repeat(5 - rating)}</div>
+      `;
+      container.appendChild(review);
     });
-}
+  }
 
-// Fetch reviews on page load
-fetchReviews();
+  window.addEventListener('DOMContentLoaded', () => {
+    Tabletop.init({
+      key: '1ui6pDSojEe03--9GggTFoBO_MITIAq3WTXJOFRJfbM0',
+      simpleSheet: true,
+      callback: showReviews
+    });
+  });
 </script>
 
-</body>
-</html>
-      
-      <div class="testimonial">
-        <p>"Absolutely loved the service! The braids were flawless and the atmosphere was so relaxing."</p>
-        <h4>— Tanaka M.</h4>
-      </div>
-      <div class="testimonial">
-        <p>"My lashes have never looked this good. Highly recommend Pretty Parlor!"</p>
-        <h4>— Nyasha D.</h4>
-      </div>
-      <div class="testimonial">
-        <p>"Great customer service and stunning results. My go-to beauty spot in Harare!"</p>
-        <h4>— Lisa K.</h4>
-      </div>
-    </section>
+<style>
+  .testimonial {
+    background: rgba(255, 240, 245, 0.95);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  .star-rating {
+    color: gold;
+    font-size: 1.2em;
+    margin-top: 5px;
+  }
+</style>
 
     <footer>
       <p>Contact us: patiesango92@gmail.com | +263 242 589691 | +263719980804</p>
