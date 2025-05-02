@@ -1,185 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Pretty Parlor</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-        header {
-            background: #f8b1d0;
-            padding: 40px 0;
-            text-align: center;
-            color: #fff;
-        }
-        header h1 {
-            font-size: 48px;
-            margin: 0;
-        }
-        .service-card {
-            display: inline-block;
-            width: 22%;
-            margin: 15px;
-            text-align: center;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-        .service-card:hover {
-            transform: scale(1.05);
-        }
-        .service-card img {
-            width: 100%;
-            height: auto;
-        }
-        .service-card h3 {
-            font-size: 24px;
-            color: #333;
-            padding: 15px 0;
-        }
-        .service-card p {
-            font-size: 16px;
-            color: #555;
-            padding: 0 15px 15px;
-        }
-        .services {
-            text-align: center;
-            padding: 40px 10%;
-        }
-        .testimonial {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            margin: 20px 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .testimonial p {
-            font-style: italic;
-            color: #777;
-        }
-        footer {
-            background: #f8b1d0;
-            padding: 20px 0;
-            text-align: center;
-            color: #fff;
-        }
-        footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .contact-form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .contact-form button {
-            background-color: #f8b1d0;
-            border: none;
-            color: white;
-            padding: 15px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .contact-form button:hover {
-            background-color: #f79db1;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Pretty Parlor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    body {
+      background: url('beauty-salon.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(255, 240, 245, 0.88);
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 3em;
+      color: #c56c9d;
+    }
+
+    p.subtitle {
+      text-align: center;
+      font-size: 1.2em;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-bottom: 50px;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .form-section {
+      background: #fff0f4;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    form button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #e578a1;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    form button:hover {
+      background: #c76c8c;
+    }
+
+    .contact {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .form-section {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <h1>The Pretty Parlor</h1>
+    <p class="subtitle">Elegance. Confidence. Beauty — All in One Place.</p>
 
-<header>
-    <h1>Welcome to The Pretty Parlor</h1>
-    <p>Your destination for flawless beauty and self-care.</p>
-</header>
-
-<section class="services">
-    <h2>Our Services</h2>
-    <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1592357245959-59d61d4bb411?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDg0N3wwfDF8c2VhY2h8NXx8aGFpciUyMGJyYWlkaW5nJTIwZXh0ZW5zaW9ufGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=400" alt="Hair Braiding & Extensions">
+    <div class="services">
+      <div class="service-card">
+        <img src="hair.jpg" alt="Hair Braiding and Extensions">
         <h3>Hair Braiding & Extensions</h3>
-        <p>Get the perfect braids or add volume and length with our premium extensions.</p>
-    </div>
-    <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1614691028488-2ef032e5d053?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDg0N3wwfDF8c2VhY2h8NXx8bWljcm9ibGFkaW5nfGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=400" alt="Microblading">
+        <p>Beautifully styled braids and natural extensions that last and impress.</p>
+      </div>
+      <div class="service-card">
+        <img src="microblading.jpg" alt="Microblading">
         <h3>Microblading</h3>
-        <p>Define your eyebrows with precision and artistry, giving you a flawless look.</p>
-    </div>
-    <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1603197282454-ea7360d93b1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDg0N3wwfDF8c2VhY2h8Mnx8ZXlzaGF8ZW5ndW5vJTIwZXh0ZW5zaW9ufDB8fHx8&ixlib=rb-1.2.1&q=80&w=400" alt="Eyelash Extensions">
+        <p>Perfectly sculpted brows that frame your face with precision and grace.</p>
+      </div>
+      <div class="service-card">
+        <img src="eyelashes.jpg" alt="Eyelashes">
         <h3>Eyelash Extensions</h3>
-        <p>Enhance your eyes with beautiful, voluminous lashes that last for weeks.</p>
-    </div>
-    <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1605857159336-29cb53e81e24?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDg0N3wwfDF8c2VhY2h8Mnx8bWFuaWN1cmV8ZW5ndW5vJTIwZXh0ZW5zaW9ufDB8fHx8&ixlib=rb-1.2.1&q=80&w=400" alt="Manicure">
+        <p>Volume, curl, and length — customized lash extensions for every eye.</p>
+      </div>
+      <div class="service-card">
+        <img src="manicure.jpg" alt="Manicure">
         <h3>Manicure</h3>
-        <p>Pamper your hands and nails with our luxurious manicure treatments.</p>
+        <p>Pamper your hands with our luxurious nail care and polish perfection.</p>
+      </div>
     </div>
-</section>
 
-<section class="contact-form">
-    <h2>Book Your Appointment</h2>
-    <form action="https://formspree.io/f/maykdlzv" method="POST">
+    <div class="form-section">
+      <h2>Book Your Appointment</h2>
+      <form action="https://formspree.io/f/xdoqpnlo" method="POST">
         <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
-        
+        <input type="text" name="name" required/>
+
+        <label for="phone">Phone Number</label>
+        <input type="text" name="phone" required/>
+
         <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="Your Email" required>
-        
-        <label for="service">Choose Service</label>
-        <select id="service" name="service">
-            <option value="Hair Braiding & Extensions">Hair Braiding & Extensions</option>
-            <option value="Microblading">Microblading</option>
-            <option value="Eyelash Extensions">Eyelash Extensions</option>
-            <option value="Manicure">Manicure</option>
-        </select>
-        
-        <label for="message">Additional Notes</label>
-        <textarea id="message" name="message" rows="4" placeholder="Any special requests?" required></textarea>
-        
-        <button type="submit">Book Appointment</button>
-    </form>
-</section>
+        <input type="email" name="email" required/>
 
-<section class="testimonial">
-    <h2>Client Testimonials</h2>
-    <p>"I had the most amazing experience at The Pretty Parlor! The service was top-notch, and I left feeling like a brand-new person!" – Maria D.</p>
-    <p>"The staff here are so professional. I highly recommend their microblading service — they’re simply the best in town!" – Sarah M.</p>
-</section>
+        <label for="service">Service</label>
+        <input type="text" name="service" required/>
 
-<section class="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:patiesango92@gmail.com">patiesango92@gmail.com</a></p>
-    <p>Location: Corner Takawira and Tongogara, Avenues, Harare, Zimbabwe</p>
-    <p>Phone:</p>
-    <ul>
-        <li>Landline: +263 242 589691</li>
-        <li>Cell: +263 719 980 804</li>
-    </ul>
-</section>
+        <label for="date">Preferred Date</label>
+        <input type="date" name="date" required/>
 
-<footer>
-    <p>&copy; 2025 The Pretty Parlor. All rights reserved. <a href="https://www.instagram.com" target="_blank">Follow us on Instagram</a></p>
-</footer>
+        <label for="message">Any Notes</label>
+        <textarea name="message" rows="4"></textarea>
 
+        <button type="submit">Submit Booking</button>
+      </form>
+    </div>
+
+    <div class="contact">
+      <p>Email: patiesango92@gmail.com</p>
+      <p>Location: Corner Takawira and Tongogara, Avenues, Harare, Zimbabwe</p>
+      <p>Landline: +263 242 589691 | Cell: +263 719 980 804</p>
+    </div>
+  </div>
 </body>
 </html>
