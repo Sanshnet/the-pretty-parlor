@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Pretty Parlor</title>
   <style>
     body {
@@ -24,13 +24,13 @@
     }
 
     .title-background {
-  background: rgba(255, 183, 212, 0.85); /* soft pink with near full opacity */
-  padding: 20px;
-  text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  margin: 20px auto;
-  max-width: 800px;
+      background: rgba(255, 183, 212, 0.85);
+      padding: 20px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      max-width: 800px;
     }
 
     header h1 {
@@ -131,6 +131,26 @@
       font-weight: normal;
     }
 
+    /* Review Section Styling */
+    #reviews-container {
+      margin-top: 50px;
+      width: 80%;
+      margin: 30px auto;
+    }
+    
+    .review {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    
+    .star-rating {
+      color: gold;
+      font-size: 20px;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -142,30 +162,30 @@
 <body>
   <div class="overlay">
     <header>
-  <div class="title-background">
-    <h1>The Pretty Parlor</h1>
-    <p>Where elegance meets confidence — walk in & glow out.</p>
-  </div>
-</header>
+      <div class="title-background">
+        <h1>The Pretty Parlor</h1>
+        <p>Where elegance meets confidence — walk in & glow out.</p>
+      </div>
+    </header>
 
     <section class="services">
       <div class="service">
-        <img src="hair-braiding.jpg" alt="Hair Braiding" />
+        <img src="hair-braiding.jpg" alt="Hair Braiding">
         <h3>Hair Braiding & Extensions</h3>
         <p>Protective, stylish, and customized braiding styles just for you.</p>
       </div>
       <div class="service">
-        <img src="microblading.jpg" alt="Microblading" />
+        <img src="microblading.jpg" alt="Microblading">
         <h3>Microblading</h3>
         <p>Wake up to perfect brows with our expert semi-permanent solutions.</p>
       </div>
       <div class="service">
-        <img src="eyelashes.jpg" alt="Eyelashes" />
+        <img src="eyelashes.jpg" alt="Eyelashes">
         <h3>Eyelash Extensions</h3>
         <p>Enhance your natural beauty with full, fluttery lash extensions.</p>
       </div>
       <div class="service">
-        <img src="manicure.jpg" alt="Manicure" />
+        <img src="manicure.jpg" alt="Manicure">
         <h3>Manicure</h3>
         <p>Pamper your hands with the care and elegance they deserve.</p>
       </div>
@@ -174,9 +194,9 @@
     <section class="form-section">
       <h2>Book an Appointment</h2>
       <form action="https://formsubmit.co/patiesango92@gmail.com" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="_replyto" placeholder="Your Email" required />
-        <input type="text" name="phone" placeholder="Phone Number" required />
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
+        <input type="text" name="phone" placeholder="Phone Number" required>
         <select name="service" required>
           <option value="" disabled selected>Select Service</option>
           <option value="Hair Braiding">Hair Braiding & Extensions</option>
@@ -186,7 +206,7 @@
         </select>
 
         <label for="date">Preferred Date</label>
-        <input type="date" id="date" name="date" required/>
+        <input type="date" id="date" name="date" required>
 
         <label for="time">Preferred Time:</label>
         <select id="time" name="time" required>
@@ -201,89 +221,74 @@
     </section>
 
     <section class="testimonials">
-  <h2>What Our Clients Say</h2>
+      <h2>What Our Clients Say</h2>
+      <div id="reviews-container"></div>
 
-  <div id="reviews-container"></div>
+      <h3>Leave a Review</h3>
+      <form id="review-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required placeholder="Your Name">
+        
+        <label for="review-text">Your Review:</label>
+        <textarea id="review-text" required placeholder="Share your thoughts..."></textarea>
+        
+        <label for="rating">Rating:</label>
+        <select id="rating" required>
+          <option value="1">★☆☆☆☆</option>
+          <option value="2">★★☆☆☆</option>
+          <option value="3">★★★☆☆</option>
+          <option value="4">★★★★☆</option>
+          <option value="5">★★★★★</option>
+        </select>
 
-<style>
-  /* Review Section Styling */
+        <button type="submit">Submit Review</button>
+      </form>
+    </section>
 
-    #reviews-container {
-      margin-top: 50px;
-      width: 80%;
-      margin: 30px auto;
-    }
-    .review {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-    }
-    .star-rating {
-      color: gold;
-      font-size: 20px;
-    }
-   
-  </style>
-</head>
-<body>
-
-  <h3>Leave a Review</h3>
-  <form id="review-form">
-    <label for="name">Name:</label>
-    <input type="text" id="name" required placeholder="Your Name">
-    
-    <label for="review-text">Your Review:</label>
-    <textarea id="review-text" required placeholder="Share your thoughts..."></textarea>
-    
-    <label for="rating">Rating:</label>
-    <select id="rating" required>
-        <option value="1">★☆☆☆☆</option>
-        <option value="2">★★☆☆☆</option>
-        <option value="3">★★★☆☆</option>
-        <option value="4">★★★★☆</option>
-        <option value="5">★★★★★</option>
-    </select>
-
-    <button type="submit">Submit Review</button>
-  </form>
-
-  <div id="reviews-container"></div>
+    <footer>
+      <p>Contact us: patiesango92@gmail.com | +263 242 589691 | +263719980804</p>
+      <p>Corner Takawira and Tongogara, Avenues, Harare, Zimbabwe</p>
+    </footer>
+  </div>
 
   <script>
     const spreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR4GqIKcl4fEqH57rllRL-iijTkxuY4FrfxTZzOkruKj-suAa3I4frkePzdXALJ8wfgdB-hP_mPcPv5/pubhtml';
 
     async function fetchReviews() {
-      const response = await fetch(spreadsheetUrl);
-      const csvText = await response.text();
-      const rows = csvText.split("\n");
+      try {
+        const response = await fetch(spreadsheetUrl);
+        const csvText = await response.text();
+        const rows = csvText.split("\n");
 
-      const reviewsContainer = document.getElementById('reviews-container');
-      
-      rows.forEach((row, index) => {
-        if (index > 0 && row.trim()) {  // Skip header row and empty rows
-          const [time, name, reviewText, rating] = row.split(',');
+        const reviewsContainer = document.getElementById('reviews-container');
+        reviewsContainer.innerHTML = ''; // Clear existing reviews
+        
+        rows.forEach((row, index) => {
+          if (index > 0 && row.trim()) {  // Skip header row and empty rows
+            const [time, name, reviewText, rating] = row.split(',');
 
-          // Create review element
-          const reviewElement = document.createElement('div');
-          reviewElement.classList.add('review');
+            // Create review element
+            const reviewElement = document.createElement('div');
+            reviewElement.classList.add('review');
 
-          // Add name, review text, and star rating
-          reviewElement.innerHTML = `
-            <strong>${name || 'Anonymous'}</strong>
-            <p>${reviewText || 'No review provided'}</p>
-            <div class="star-rating">${'★'.repeat(parseInt(rating) || 0)}${'☆'.repeat(5 - (parseInt(rating) || 0))}</div>
-          `;
+            // Add name, review text, and star rating
+            reviewElement.innerHTML = `
+              <strong>${name || 'Anonymous'}</strong>
+              <p>${reviewText || 'No review provided'}</p>
+              <div class="star-rating">${'★'.repeat(parseInt(rating) || 0)}${'☆'.repeat(5 - (parseInt(rating) || 0))}</div>
+            `;
 
-          // Append to the container
-          reviewsContainer.appendChild(reviewElement);
-        }
-      });
+            // Append to the container
+            reviewsContainer.appendChild(reviewElement);
+          }
+        });
+      } catch (error) {
+        console.error('Error fetching reviews:', error);
+      }
     }
 
     // Fetch and display reviews when the page loads
-    fetchReviews();
+    document.addEventListener('DOMContentLoaded', fetchReviews);
 
     // Handle review submission
     document.getElementById('review-form').addEventListener('submit', function(e) {
@@ -314,7 +319,7 @@
       .then(response => response.json())
       .then(result => {
         alert('Review submitted successfully!');
-       document.getElementById('review-form').reset();
+        document.getElementById('review-form').reset();
         fetchReviews(); // Refresh reviews after submission
       })
       .catch(error => {
@@ -323,11 +328,5 @@
       });
     });
   </script>
-
-  <footer>
-    <p>Contact us: patiesango92@gmail.com | +263 242 589691 | +263719980804</p>
-    <p>Corner Takawira and Tongogara, Avenues, Harare, Zimbabwe</p>
-  </footer>
-
 </body>
 </html>
