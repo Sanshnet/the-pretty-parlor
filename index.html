@@ -314,7 +314,7 @@
       .then(response => response.json())
       .then(result => {
         alert('Review submitted successfully!');
-        form.reset();
+       document.getElementById('review-form').reset();
         fetchReviews(); // Refresh reviews after submission
       })
       .catch(error => {
