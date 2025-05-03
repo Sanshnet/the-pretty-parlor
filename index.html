@@ -302,10 +302,6 @@
     document.getElementById('review-form').addEventListener('submit', async function(e) {
   e.preventDefault();
 
-  const name = document.getElementById('name').value.trim();
-  const reviewText = document.getElementById('review-text').value.trim();
-  const rating = document.getElementById('rating').value;
-
   if (!name || !reviewText || !rating) {
     alert("Please fill in all fields.");
     return;
