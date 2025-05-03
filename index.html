@@ -252,7 +252,7 @@
   <div id="reviews-container"></div>
 
   <script>
-    const spreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR4GqIKcl4fEqH57rllRL-iijTkxuY4FrfxTZzOkruKj-suAa3I4frkePzdXALJ8wfgdB-hP_mPcPv5/pub?output=csv';
+    const spreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR4GqIKcl4fEqH57rllRL-iijTkxuY4FrfxTZzOkruKj-suAa3I4frkePzdXALJ8wfgdB-hP_mPcPv5/pubhtml';
 
     async function fetchReviews() {
       const response = await fetch(spreadsheetUrl);
@@ -286,8 +286,8 @@
     fetchReviews();
 
     // Handle review submission
-    document.getElementById('review-form').addEventListener('submit', async function(event) {
-      event.preventDefault();
+    document.getElementById('review-form').addEventListener('submit', function(e) {
+      e.preventDefault();
 
       const name = document.getElementById('name').value;
       const reviewText = document.getElementById('review-text').value;
