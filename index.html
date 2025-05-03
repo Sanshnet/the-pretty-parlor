@@ -325,7 +325,8 @@
     });
 
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error('Review Submitted Successfully. Refresh Page to see it!');
+      document.getElementById("review-form").reset();
     }
 
     const data = await response.json();
