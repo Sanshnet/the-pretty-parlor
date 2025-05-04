@@ -60,3 +60,35 @@ nav a {
   border: 1px solid #ddd;
   border-radius: 4px;
 }
+
+/* Navigation Styles */
+nav {
+  background-color: #ff9bb3; /* Pretty Parlor pink */
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #e01385; /* Darker pink */
+  transform: translateY(-2px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
