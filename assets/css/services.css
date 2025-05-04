@@ -1,0 +1,119 @@
+/* Pricing Tables */
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.price-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.price-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Booking Buttons */
+.book-now {
+  background: #ff6b9e;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Lash Type Selector */
+#lash-type {
+  width: 100%;
+  padding: 12px;
+  margin: 1rem 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* ===== BRAIDING SPECIFIC ===== */
+.braiding-hero {
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+              url('../images/braiding-banner.jpg');
+  background-size: cover;
+}
+
+#braid-style, #extension-type {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+}
+
+/* ===== MICROBLADING SELECTOR ===== */
+.microblading-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.microblading-option {
+  border: 1px solid #f0f0f0;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.microblading-option.selected {
+  border-color: #ff6b9e;
+  background: #fff0f5;
+}
+
+/* ===== MANICURE ADD-ONS ===== */
+.manicure-addons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.addon-checkbox {
+  display: none;
+}
+
+.addon-label {
+  display: block;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.addon-checkbox:checked + .addon-label {
+  background: #ff6b9e;
+  color: white;
+}
+
+/* ===== SHARED SERVICE STYLES ===== */
+.service-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.option-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.price-range {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
