@@ -43,24 +43,39 @@ nav a {
   padding: 1rem;
 }
 
-.form-group {
-  margin-bottom: 1.5rem;
-}
+ .form-section {
+      padding: 40px 20px;
+      text-align: center;
+    }
 
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
 
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
+    form input,
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
 
+    form button {
+      background-color: #ff1493;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #e01385;
+    }
 /* Navigation Styles */
 nav {
   background-color: #ff9bb3; /* Pretty Parlor pink */
