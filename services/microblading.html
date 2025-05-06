@@ -6,46 +6,79 @@
   <title>Microblading | The Pretty Parlor</title>
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/services.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: 
+        linear-gradient(rgba(255, 183, 212, 0.8), rgba(255, 183, 212, 0.8)),
+        url('../microblading.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+    
+    .page-banner {
+      width: 100%;
+      height: 450px;
+      overflow: hidden;
+    }
+    
+    .page-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .service-page {
+      background-color: rgba(255, 255, 255, 0.9);
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
 <header>
   <nav>
     <a href="../index.html">Home</a>
     <a href="braiding-extensions.html">Braiding</a>
-    <a href="microblading.html">Microblading</a>
-    <a href="manicure.html" class="active">Manicure</a>
+    <a href="microblading.html" class="active">Microblading</a>
+    <a href="manicure.html">Manicure</a>
     <a href="eyelash-extensions.html">Eyelashes</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
 
   <main class="service-page">
+    <!-- Page Banner Section -->
+    <section class="page-banner">
+      <img src='../microblading.jpg' alt="Microblading before/after">
+    </section>
+    
     <section class="hero microblading-hero">
-      <img src="../microblading.jpg" alt="Microblading before/after">
       <h1>Microblading</h1>
       <p class="price-range">Starting at $99 | 1 - 2 Hours</p>
       <p>Lasts upto 5 years</p>
     </section>
 
     <section class="service-options">
-      
-  <div class="service-card">
-    <h2>Why Choose Us?</h2>
-    <ul class="benefits">
-      <li>🇺🇸 Certified PMU Artist</li>
-      <li>🔒 100% Sterile Tools</li>
-      <li>🎨 Custom Brow Design</li>
-    </ul>
-  </div>
+      <div class="service-card">
+        <h2>Why Choose Us?</h2>
+        <ul class="benefits">
+          <li>🇺🇸 Certified PMU Artist</li>
+          <li>🔒 100% Sterile Tools</li>
+          <li>🎨 Custom Brow Design</li>
+        </ul>
+      </div>
       
       <div class="option-card">
         <h3>Luxury Microblading</h3>
         <select id="microblading-type">
-      <option value="classic">Basic Microblading ($299)</option>
-      <option value="volume">Ombre Brows ($349)</option>
-      <option value="hybrid">Combination Brows (449)</option>
-      <option value="volume">Touch-Up (6-8 weeks)  ($99)</option>
-    </select>
+          <option value="classic">Basic Microblading ($299)</option>
+          <option value="volume">Ombre Brows ($349)</option>
+          <option value="hybrid">Combination Brows (449)</option>
+          <option value="volume">Touch-Up (6-8 weeks)  ($99)</option>
+        </select>
       </div>
 
       <button class="book-now" data-service="Microblading">Book Now</button>
@@ -53,18 +86,17 @@
 
     <section class="manicure-aftercare">
       <h2>Aftercare Kit Included</h2>
-    <ul>
-      <li>📖 Care instructions</li>
+      <ul>
+        <li>📖 Care instructions</li>
       </ul>
 
-  <div class="before-after">
-    <h3>Our Work</h3>
-    <div class="gallery">
-      <img src="../assets/images/microblading-1.jpg" loading="lazy">
-      <img src="../assets/images/microblading-2.jpg" loading="lazy">
-    </div>
-  </div>
-      
+      <div class="before-after">
+        <h3>Our Work</h3>
+        <div class="gallery">
+          <img src="../assets/images/microblading-1.jpg" loading="lazy">
+          <img src="../assets/images/microblading-2.jpg" loading="lazy">
+        </div>
+      </div>
     </section>
   </main>
 
