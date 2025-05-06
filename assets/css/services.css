@@ -40,7 +40,7 @@
 /* ===== BRAIDING SPECIFIC ===== */
 .braiding-hero {
   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-              url('../images/braiding-banner.jpg');
+              url('braiding-extensions.jpg');
   background-size: cover;
 }
 
