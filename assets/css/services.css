@@ -92,7 +92,7 @@
 }
 
 .addon-checkbox:checked + .addon-label {
-  background: #ff6b9e;
+  background: rgba(255, 183, 212, 0.85);
   color: white;
 }
 
@@ -104,7 +104,7 @@
 }
 
 .option-card {
-  background: white;
+  background: rgba(255, 183, 212, 0.85);
   padding: 1.5rem;
   border-radius: 8px;
   margin-bottom: 1rem;
