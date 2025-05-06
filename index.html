@@ -140,8 +140,38 @@
       background-color: rgba(255, 183, 212, 0.8);
     }
   </style>
+
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile menu toggle
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+      
+      // Make all service cards clickable
+      document.querySelectorAll('.service-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const link = card.getAttribute('data-link');
+          window.location.href = link;
+        });
+      });
+    });
+  </script>
 </head>
 <body>
+<header class="header">
+    <div class="logo-nav">
+      <div class="hamburger">☰</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  
   <div class="overlay">
     <header>
       <div class="title-background">
@@ -165,28 +195,55 @@
   </nav>
 </header>
 
-    <section class="services">
-      <div class="service">
-        <img src="hair-braiding.jpg" alt="Hair Braiding">
-        <h3>Hair Braiding & Extensions</h3>
-        <p>Protective, stylish, and customized braiding styles just for you.</p>
+ 
+
+ <main class="container">
+    <h1>Our Services</h1>
+    
+    <div class="service-grid">
+      <!-- Braiding Card -->
+      <div class="service-card" data-link="services/braiding-extensions.html">
+        <img src="hair-braiding.jpg" alt="Braiding">
+        <div class="service-content">
+          <h3>Hair Braiding & Extensions</h3>
+          <p>Protective, stylish, and customized braiding styles just for you. Professional braiding styles starting at $80</p>
+          <a href="services/braiding-extensions.html" class="btn">Learn More</a>
+        </div>
       </div>
-      <div class="service">
+      
+      <!-- Microblading Card -->
+      <div class="service-card" data-link="services/microblading.html">
         <img src="microblading.jpg" alt="Microblading">
-        <h3>Microblading</h3>
-        <p>Wake up to perfect brows with our expert semi-permanent solutions.</p>
+        <div class="service-content">
+          <h3>Microblading</h3>
+          <p>Wake up to perfect brows with our expert semi-permanent solutions. Perfect brows starting at $299</p>
+          <a href="services/microblading.html" class="btn">Learn More</a>
+        </div>
       </div>
-      <div class="service">
+      
+      <!-- Eyelash Extensions Card -->
+      <div class="service-card" data-link="services/eyelashes.html">
         <img src="eyelashes.jpg" alt="Eyelashes">
-        <h3>Eyelash Extensions</h3>
-        <p>Enhance your natural beauty with full, fluttery lash extensions.</p>
+        <div class="service-content">
+          <h3>Eyelash Extensions</h3>
+          <p>Enhance your natural beauty with full, fluttery lash extensions. Starting at $29</p>
+          <a href="services/eyelashes.html" class="btn">Learn More</a>
+        </div>
       </div>
-      <div class="service">
+      
+      <!-- Manicure Card -->
+      <div class="service-card" data-link="services/manicure.html">
         <img src="manicure.jpg" alt="Manicure">
-        <h3>Manicure</h3>
-        <p>Pamper your hands with the care and elegance they deserve.</p>
+        <div class="service-content">
+          <h3>Manicure</h3>
+          <p>Pamper your hands with the care and elegance they deserve. Starting at $49</p>
+          <a href="services/manicure.html" class="btn">Learn More</a>
+        </div>
       </div>
-    </section>
+      
+      <!-- Add other service cards similarly -->
+    </div>
+  </main>
 
     <section class="form-section">
       <h2>Book an Appointment</h2>
