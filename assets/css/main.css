@@ -50,7 +50,7 @@
     }
     
     /* Overlay when menu is open */
-    .overlay {
+    /*.overlay {
       position: fixed;
       top: 0;
       left: 0;
@@ -63,7 +63,7 @@
     
     .overlay.active {
       display: block;
-    }
+    }*/
 /* ===== SERVICE CARDS ===== */
 .service-grid {
   display: grid;
