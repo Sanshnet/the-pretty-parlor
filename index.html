@@ -262,14 +262,35 @@
       <p>Corner Takawira and Tongogara, Avenues, Harare, Zimbabwe</p>
     </footer>
   </div>
-
-  <script>
+ </div>
+  
 
   <script src="assets/js/reviews.js"></script> <!-- Reviews script -->
   
   <script>
   
-    
+     // Hamburger Menu Functionality
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      const closeBtn = document.querySelector('.close-btn');
+      const menuOverlay = document.querySelector('.menu-overlay');
+      
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.add('active');
+        menuOverlay.classList.add('active');
+      });
+      
+      closeBtn.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuOverlay.classList.remove('active');
+      });
+      
+      menuOverlay.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuOverlay.classList.remove('active');
+      });
+    });
     document.getElementById('review-form').addEventListener('submit', async function(e) {
       e.preventDefault();
 
