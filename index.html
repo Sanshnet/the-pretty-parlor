@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Pretty Parlor</title>
   <link rel="stylesheet" href="assets/css/main.css"> <!-- Your CSS with hamburger styles -->
-  <style>
+  <style> 
+    .content-container {
+      margin-top: 60px; /* Makes space for hamburger menu */
+    }
     body {
       margin: 0;
       font-family: "Segoe UI", sans-serif;
@@ -265,28 +268,7 @@
   <script src="assets/js/reviews.js"></script> <!-- Reviews script -->
   
   <script>
-    // Hamburger Menu Functionality
-    document.addEventListener('DOMContentLoaded', () => {
-      const hamburger = document.querySelector('.hamburger');
-      const navLinks = document.querySelector('.nav-links');
-      const closeBtn = document.querySelector('.close-btn');
-      const menuOverlay = document.querySelector('.menu-overlay');
-      
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.add('active');
-        menuOverlay.classList.add('active');
-      });
-      
-      closeBtn.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        menuOverlay.classList.remove('active');
-      });
-      
-      menuOverlay.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        menuOverlay.classList.remove('active');
-      });
-    });
+  
     
     document.getElementById('review-form').addEventListener('submit', async function(e) {
       e.preventDefault();
