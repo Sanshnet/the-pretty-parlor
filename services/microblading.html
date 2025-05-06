@@ -139,5 +139,21 @@
   </main>
 
   <script src="../assets/js/booking.js"></script>
+
+<script>
+  // Auto-detect GitHub Pages base path
+  const basePath = window.location.pathname.includes('/the-pretty-parlor') 
+    ? '/the-pretty-parlor' 
+    : '';
+  
+  // Update all navigation links
+  document.querySelectorAll('nav a').forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href.startsWith('http') && !href.startsWith(basePath)) {
+      link.href = basePath + href;
+    }
+  });
+</script>
+  
 </body>
 </html>
