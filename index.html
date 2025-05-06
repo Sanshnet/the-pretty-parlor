@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Pretty Parlor</title>
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/nav.css"> <!-- Your navigation CSS -->
+  <link rel="stylesheet" href="assets/css/main.css"> <!-- Your CSS with hamburger styles -->
   <style>
     body {
       margin: 0;
@@ -15,10 +14,9 @@
       color: #333;
     }
 
-    .content-overlay {
+    .overlay {
       background-color: rgba(255, 183, 212, 0.4);
       padding: 40px 20px;
-      margin-top: 60px; /* Space for hamburger */
     }
 
     .title-background {
@@ -138,7 +136,7 @@
   </style>
 </head>
 <body>
-  <!-- Hamburger Menu Structure -->
+  <!-- Only Hamburger Menu Structure Added -->
   <header class="header">
     <div class="hamburger">☰</div>
     <div class="menu-overlay"></div>
@@ -153,8 +151,8 @@
     </nav>
   </header>
 
-  <!-- Page Content -->
-  <div class="content-overlay">
+  <!-- Original Content Exactly As You Had It -->
+  <div class="overlay">
     <div class="title-background">
       <h1>The Pretty Parlor</h1>
       <p>Where elegance meets confidence — walk in & glow out.</p>
@@ -164,7 +162,6 @@
       <h1>Our Services</h1>
       
       <div class="service-grid">
-        <!-- Braiding Card -->
         <div class="service-card" data-link="services/braiding-extensions.html">
           <img src="hair-braiding.jpg" alt="Braiding">
           <div class="service-content">
@@ -174,7 +171,6 @@
           </div>
         </div>
         
-        <!-- Microblading Card -->
         <div class="service-card" data-link="services/microblading.html">
           <img src="microblading.jpg" alt="Microblading">
           <div class="service-content">
@@ -184,7 +180,6 @@
           </div>
         </div>
         
-        <!-- Eyelash Extensions Card -->
         <div class="service-card" data-link="services/eyelashes.html">
           <img src="eyelashes.jpg" alt="Eyelashes">
           <div class="service-content">
@@ -194,7 +189,6 @@
           </div>
         </div>
         
-        <!-- Manicure Card -->
         <div class="service-card" data-link="services/manicure.html">
           <img src="manicure.jpg" alt="Manicure">
           <div class="service-content">
@@ -266,9 +260,8 @@
     </footer>
   </div>
 
-  <script 
-    
-     // Hamburger Menu Functionality
+  <script>
+    // Hamburger Menu Functionality
     document.addEventListener('DOMContentLoaded', () => {
       const hamburger = document.querySelector('.hamburger');
       const navLinks = document.querySelector('.nav-links');
@@ -290,8 +283,6 @@
         menuOverlay.classList.remove('active');
       });
     });
-    
-    </script> <!-- Your navigation JavaScript -->
   <script src="assets/js/reviews.js"></script> <!-- Reviews script -->
   
   <script>
