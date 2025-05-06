@@ -155,6 +155,43 @@
     </nav>
   </header>
 
+  
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      const closeBtn = document.querySelector('.close-btn');
+      const overlay = document.querySelector('.overlay');
+      
+      // Toggle menu
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.add('active');
+        overlay.classList.add('active');
+      });
+      
+      // Close menu
+      closeBtn.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+      
+      // Close when clicking overlay
+      overlay.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+      
+      // Close when clicking a link (optional)
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          overlay.classList.remove('active');
+        });
+      });
+    });
+  </script>
+
   <!-- Original Content Exactly As You Had It -->
   <div class="content-container">
   <div class="overlay">
@@ -270,29 +307,6 @@
   <script src="assets/js/reviews.js"></script> <!-- Reviews script -->
   
   <script>
-  
-     // Hamburger Menu Functionality
-    document.addEventListener('DOMContentLoaded', () => {
-      const hamburger = document.querySelector('.hamburger');
-      const navLinks = document.querySelector('.nav-links');
-      const closeBtn = document.querySelector('.close-btn');
-      const menuOverlay = document.querySelector('.menu-overlay');
-      
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.add('active');
-        menuOverlay.classList.add('active');
-      });
-      
-      closeBtn.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        menuOverlay.classList.remove('active');
-      });
-      
-      menuOverlay.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        menuOverlay.classList.remove('active');
-      });
-    });
     document.getElementById('review-form').addEventListener('submit', async function(e) {
       e.preventDefault();
 
