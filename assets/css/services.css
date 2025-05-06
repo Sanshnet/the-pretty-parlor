@@ -54,6 +54,13 @@
 }
 
 /* ===== MICROBLADING SELECTOR ===== */
+.microblading-hero {
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+              url('microblading.jpg');
+  background-size: cover;
+}
+
+
 .microblading-options {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -73,6 +80,12 @@
 }
 
 /* ===== MANICURE ADD-ONS ===== */
+
+.manicure-hero {
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+              url('manicure.jpg');
+  background-size: cover;
+
 .manicure-addons {
   display: flex;
   flex-wrap: wrap;
@@ -95,6 +108,32 @@
   background: rgba(255, 183, 212, 0.85);
   color: white;
 }
+
+/* ===== MICROBLADING SELECTOR ===== */
+.eyelashes-hero {
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+              url('eyelashes.jpg');
+  background-size: cover;
+}
+
+
+.eyelashes-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.eyelashes-option {
+  border: 1px solid #f0f0f0;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.eyelashes-option.selected {
+  border-color: #ff6b9e;
+  background: #fff0f5;
+}  
 
 /* ===== SHARED SERVICE STYLES ===== */
 .service-page {
