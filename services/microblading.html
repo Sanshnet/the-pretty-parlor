@@ -1,30 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Correct path goes UP one level then into assets -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microblading | The Pretty Parlor</title>
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/services.css">
 </head>
-
+<body>
 <header>
   <nav>
     <a href="../index.html">Home</a>
     <a href="braiding-extensions.html">Braiding</a>
-    <a href="microblading.html" class="active">Microblading</a>
-    <a href="manicure.html">Manicure</a>
+    <a href="microblading.html">Microblading</a>
+    <a href="manicure.html" class="active">Manicure</a>
     <a href="eyelash-extensions.html">Eyelashes</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
 
+  <main class="service-page">
+    <section class="hero microblading-hero">
+      <img src="../microblading.jpg" alt="Microblading before/after">
+      <h1>Microblading</h1>
+      <p class="price-range">Starting at $99 | 1 - 2 Hours</p>
+      <p>Lasts upto 5 years</p>
+    </section>
 
-<div class="service-hero">
-  <img src="microblading.jpg" alt="Microblading before/after">
-  <div class="hero-text">
-    <h1>Microblading</h1>
-    <p class="price">From $299 | Lasts 12-18 months</p>
-  </div>
-</div>
-
-<section class="service-details">
+    <section class="service-options">
+      
   <div class="service-card">
     <h2>Why Choose Us?</h2>
     <ul class="benefits">
@@ -33,25 +37,25 @@
       <li>🎨 Custom Brow Design</li>
     </ul>
   </div>
+      
+      <div class="option-card">
+        <h3>Luxury Microblading</h3>
+        <select id="microblading-type">
+      <option value="classic">Basic Microblading ($299)</option>
+      <option value="volume">Ombre Brows ($349)</option>
+      <option value="hybrid">Combination Brows (449)</option>
+      <option value="volume">Touch-Up (6-8 weeks)  ($99)</option>
+    </select>
+      </div>
 
-  <div class="pricing-card">
-    <h3>Pricing</h3>
-    <table class="price-table">
-      <tr>
-        <td>Basic Microblading</td>
-        <td>$299</td>
-      </tr>
-      <tr>
-        <td>Ombre Brows</td>
-        <td>$349</td>
-      </tr>
-      <tr>
-        <td>Touch-Up (6-8 weeks)</td>
-        <td>$99</td>
-      </tr>
-    </table>
-    <button class="book-now" data-service="Microblading">Book Now</button>
-  </div>
+      <button class="book-now" data-service="Microblading">Book Now</button>
+    </section>
+
+    <section class="manicure-aftercare">
+      <h2>Aftercare Kit Included</h2>
+    <ul>
+      <li>📖 Care instructions</li>
+      </ul>
 
   <div class="before-after">
     <h3>Our Work</h3>
@@ -60,4 +64,10 @@
       <img src="../assets/images/microblading-2.jpg" loading="lazy">
     </div>
   </div>
-</section>
+      
+    </section>
+  </main>
+
+  <script src="../assets/js/booking.js"></script>
+</body>
+</html>
