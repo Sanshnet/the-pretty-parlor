@@ -1,9 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Correct path goes UP one level then into assets -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eyelash Extensions | The Pretty Parlor</title>
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/services.css">
 </head>
-
+<body>
 <header>
   <nav>
     <a href="../index.html">Home</a>
@@ -15,41 +19,36 @@
   </nav>
 </header>
 
-<div class="service-hero eyelashes-hero">
-  <div class="hero-content">
-    <h1>Eyelash Extensions</h1>
-    <div class="lash-types">
-      <div class="type">
-        <h3>Classic</h3>
-        <p>1:1 extension</p>
-        <p class="price">$99+</p>
-      </div>
-      <div class="type">
-        <h3>Volume</h3>
-        <p>2D-6D fans</p>
-        <p class="price">$129+</p>
-      </div>
-    </div>
-  </div>
-</div>
+  <main class="service-page">
+    <section class="hero eyelashes-hero">
+      <h1>Eyelash Extensions</h1>
+      <p class="price-range">Starting at $99 | 15-45 minutes</p>
+    </section>
 
-<section class="lash-details">
-  <div class="aftercare">
-    <h2>Aftercare Kit Included</h2>
+    <section class="service-options">
+
+      <div class="option-card">
+        <h3>Ready for Fuller Lashes?</h3>
+        <select id="eyelashes-type">
+      <option value="classic">Classic Set | 1:1 extensions ($99)</option>
+      <option value="volume">Volume Set | 2D-6D fans ($129)</option>
+      <option value="hybrid">Hybrid Set ($119)</option>
+    </select>
+      </div>
+
+      <button class="book-now" data-service="Eyelashes">Book Now</button>
+    </section>
+
+    <section class="eyelashes-aftercare">
+      <h2>Aftercare Kit Included</h2>
     <ul>
       <li>🧴 Oil-free cleanser</li>
       <li>🖌️ Microbrush</li>
       <li>📖 Care instructions</li>
-    </ul>
-  </div>
+      </ul>
+    </section>
+  </main>
 
-  <div class="booking-widget">
-    <h3>Ready for Fuller Lashes?</h3>
-    <select id="lash-type">
-      <option value="classic">Classic Set ($99)</option>
-      <option value="volume">Volume Set ($129)</option>
-      <option value="hybrid">Hybrid Set ($119)</option>
-    </select>
-    <button class="book-now" data-service="Eyelash Extensions">Book Now</button>
-  </div>
-</section>
+  <script src="../assets/js/booking.js"></script>
+</body>
+</html>
