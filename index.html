@@ -267,37 +267,31 @@
   <!-- Updated JavaScript for better functionality -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const hamburger = document.querySelector('.hamburger');
-      const navLinks = document.querySelector('.nav-links');
-      const closeBtn = document.querySelector('.close-btn');
-      const overlay = document.querySelector('.menu-overlay'); // Ensure correct overlay targeting
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  const closeBtn = document.querySelector('.close-btn');
+  const overlay = document.querySelector('.menu-overlay');
+  const contentContainer = document.querySelector('.content-container');
 
-      // Toggle menu
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.add('active');
-        overlay.classList.add('active');
-      });
+  // Open menu
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.add('active');
+    overlay.classList.add('active');
+    contentContainer.style.opacity = "1"; // Ensures visibility
+  });
 
-      // Close menu
-      closeBtn.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        overlay.classList.remove('active');
-      });
+  // Close menu
+  closeBtn.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    overlay.classList.remove('active');
+  });
 
-      // Close when clicking overlay
-      overlay.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        overlay.classList.remove('active');
-      });
-
-      // Close when clicking a menu link (optional)
-      document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-          navLinks.classList.remove('active');
-          overlay.classList.remove('active');
-        });
-      });
-    });
+  // Close when clicking overlay
+  overlay.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+});
   </script>
 
   <script src="assets/js/reviews.js"></script>
