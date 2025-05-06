@@ -1,5 +1,5 @@
     /* Hamburger Menu Styles */
-    /*.header {
+    .header {
       position: relative;
       padding: 1rem;
       background: #fff;
@@ -15,8 +15,10 @@
     .nav-links {
       position: fixed;
       top: 0;
-      left: -100%;
-      width: 250px;
+      .nav-links {
+      display: none; /* Instead of left: -100% */
+    }
+   width: 250px;
       height: 100vh;
       background: #fff;
       box-shadow: 2px 0 5px rgba(0,0,0,0.1);
@@ -26,8 +28,9 @@
     }
     
     .nav-links.active {
-      left: 0;
+      display: block;
     }
+   
     
     .nav-links a {
       display: block;
@@ -47,7 +50,7 @@
       right: 1rem;
       font-size: 1.5rem;
       cursor: pointer;
-    }*/
+    }
     
     /* Overlay when menu is open */
     /*.overlay {
