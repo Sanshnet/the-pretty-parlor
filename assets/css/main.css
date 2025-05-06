@@ -53,7 +53,7 @@
     }
     
     /* Overlay when menu is open */
-    .overlay {
+    /*.overlay {
       position: fixed;
       top: 0;
       left: 0;
@@ -62,11 +62,11 @@
       background: rgba(0,0,0,0.5);
       z-index: 999;
       display: none;
-    }
-    
-   /* .overlay.active {
-      display: block;
     }*/
+    
+    .overlay.active {
+      display: block;
+    }
 /* ===== SERVICE CARDS ===== */
 .service-grid {
   display: grid;
