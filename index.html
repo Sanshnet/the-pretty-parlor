@@ -334,5 +334,22 @@
       }
     });
   </script>
+<script>
+// Make service cards clickable
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.service-card');
+  
+  cards.forEach(card => {
+    card.style.cursor = 'pointer'; // Shows clickable cursor
+    card.addEventListener('click', (e) => {
+      // Don't navigate if user clicked on the Learn More link
+      if (!e.target.closest('a')) {
+        window.location.href = card.dataset.link;
+      }
+    });
+  });
+});
+</script>
+  
 </body>
 </html>
