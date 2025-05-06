@@ -62,11 +62,11 @@
       background: rgba(0,0,0,0.5);
       z-index: 999;
       display: none;
-    }*/
+    }
     
     .overlay.active {
       display: block;
-    }
+    }*/
 /* ===== SERVICE CARDS ===== */
 .service-grid {
   display: grid;
