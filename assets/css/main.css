@@ -130,19 +130,6 @@ body {
   margin: 0;
 }
 
-nav {
-  display: flex;
-  gap: 1.5rem;
-  padding: 1rem 2rem;
-  background: #ff9bb3;
-}
-
-nav a {
-  color: rgba(255, 183, 212, 0.85);
-  text-decoration: none;
-  font-weight: 600;
-}
-
 /* Service Hero Sections */
 .service-hero {
   position: relative;
