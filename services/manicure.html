@@ -1,9 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Correct path goes UP one level then into assets -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manicure | The Pretty Parlor</title>
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/services.css">
 </head>
-
+<body>
 <header>
   <nav>
     <a href="../index.html">Home</a>
@@ -15,33 +19,39 @@
   </nav>
 </header>
 
-<div class="service-hero nails-hero">
-  <h1>Luxury Manicures</h1>
-  <div class="nail-options">
-    <div class="option" data-service="Gel Manicure">
-      <h3>Gel</h3>
-      <p>$35+</p>
-      <p>Lasts 2-3 weeks</p>
-    </div>
-    <div class="option" data-service="Acrylic Set">
-      <h3>Acrylic</h3>
-      <p>$45+</p>
-    </div>
-  </div>
-</div>
+  <main class="service-page">
+    <section class="hero manicure-hero">
+      <h1>Manicure</h1>
+      <p class="price-range">Starting at $10 | 1 - 2 Hours</p>
+      <p>Lasts 2-4 weeks</p>
+    </section>
 
-<section class="add-ons">
-  <h2>Popular Add-Ons</h2>
-  <div class="add-on-grid">
-    <div class="add-on">
-      <span class="icon">💎</span>
-      <p>Nail Art</p>
-      <p class="price">+$10-$25</p>
-    </div>
-    <div class="add-on">
-      <span class="icon">🧴</span>
-      <p>Paraffin Wax</p>
-      <p class="price">+$15</p>
-    </div>
-  </div>
-</section>
+    <section class="service-options">
+
+      <div class="option-card">
+        <h3>Luxury Manicures</h3>
+        <select id="manicure-type">
+      <option value="classic">Gel Set ($20)</option>
+      <option value="volume">Acrylic Set ($12)</option>
+      <option value="hybrid">Stickon Set ($10)</option>
+      <option value="volume">Extras Nail Art  ($10-$25)</option>
+      <option value="hybrid">Extras Paraffin Wax ($10-$15)</option>
+    </select>
+      </div>
+
+      <button class="book-now" data-service="Manicure">Book Now</button>
+    </section>
+
+    <section class="manicure-aftercare">
+      <h2>Aftercare Kit Included</h2>
+    <ul>
+      <li>🧴 Clear Top Coat</li>
+      <li>🖌️ Nail Glue</li>
+      <li>📖 Care instructions</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="../assets/js/booking.js"></script>
+</body>
+</html>
