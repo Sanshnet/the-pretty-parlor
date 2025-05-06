@@ -154,6 +154,7 @@ body {
 /* Contact Page Specific */
 
  .form-section {
+      background: rgba(255, 183, 212, 0.75);
       padding: 40px 20px;
       text-align: center;
     }
