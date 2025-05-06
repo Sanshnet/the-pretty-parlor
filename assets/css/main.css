@@ -53,7 +53,7 @@
     }
     
     /* Overlay when menu is open */
-/*    .overlay {
+    .overlay {
       position: fixed;
       top: 0;
       left: 0;
@@ -64,7 +64,7 @@
       display: none;
     }
     
-    .overlay.active {
+   /* .overlay.active {
       display: block;
     }*/
 /* ===== SERVICE CARDS ===== */
