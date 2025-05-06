@@ -12,9 +12,19 @@
       body {
       margin: 0;
       font-family: "Segoe UI", sans-serif;
-      background: url('../hair-braiding.jpg') no-repeat center center fixed;
-      background-size: cover;
       color: #333;
+    }
+    
+    .page-banner {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+    
+    .page-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   </style>
 <header>
@@ -29,6 +39,11 @@
 </header>
 
   <main class="service-page">
+    <!-- Page Banner Section -->
+    <section class="page-banner">
+      <img src="../hair-braiding.jpg" alt="Hair braiding services">
+    </section>
+    
     <section class="hero braiding-hero">
       <h1>Hair Braiding & Extensions</h1>
       <p class="price-range">Starting at $80 | 2-5 hours</p>
