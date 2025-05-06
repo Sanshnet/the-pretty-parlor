@@ -38,16 +38,54 @@
   </style>
 </head>
 <body>
-<header>
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="braiding-extensions.html">Braiding</a>
-    <a href="microblading.html" class="active">Microblading</a>
-    <a href="manicure.html">Manicure</a>
-    <a href="eyelash-extensions.html">Eyelashes</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <header class="header">
+    <div class="hamburger">☰</div>
+    <div class="overlay"></div>
+    <nav class="nav-links">
+      <span class="close-btn">×</span>
+      <a href="index.html">Home</a>
+      <a href="services/braiding-extensions.html">Braiding</a>
+      <a href="services/microblading.html">Microblading</a>
+      <a href="services/manicure.html">Manicure</a>
+      <a href="services/eyelash-extensions.html">Eyelashes</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      const closeBtn = document.querySelector('.close-btn');
+      const overlay = document.querySelector('.overlay');
+      
+      // Toggle menu
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.add('active');
+        overlay.classList.add('active');
+      });
+      
+      // Close menu
+      closeBtn.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+      
+      // Close when clicking overlay
+      overlay.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+      
+      // Close when clicking a link (optional)
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          overlay.classList.remove('active');
+        });
+      });
+    });
+  </script>
 
   <main class="service-page">
     <!-- Page Banner Section -->
