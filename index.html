@@ -140,10 +140,10 @@
 </head>
   
 <body>
-  <!-- Only Hamburger Menu Structure Added -->
+  <!-- Updated Hamburger Menu -->
   <header class="header">
     <div class="hamburger">☰</div>
-    <div class="menu-overlay"></div>
+    <div class="menu-overlay"></div> <!-- Updated menu overlay class -->
     <nav class="nav-links">
       <span class="close-btn">×</span>
       <a href="index.html">Home</a>
@@ -155,34 +155,142 @@
     </nav>
   </header>
 
-  
+  <div class="content-container">
+    <div class="overlay">
+      <div class="title-background">
+        <h1>The Pretty Parlor</h1>
+        <p>Where elegance meets confidence — walk in & glow out.</p>
+      </div>
 
+      <main class="container">
+        <h1>Our Services</h1>
+        <div class="service-grid">
+          <div class="service-card" data-link="services/braiding-extensions.html">
+            <img src="hair-braiding.jpg" alt="Braiding">
+            <div class="service-content">
+              <h3>Hair Braiding & Extensions</h3>
+              <p>Protective, stylish, and customized braiding styles just for you. Professional braiding styles starting at $80</p>
+              <a href="services/braiding-extensions.html" class="btn">Learn More</a>
+            </div>
+          </div>
+          
+          <div class="service-card" data-link="services/microblading.html">
+            <img src="microblading.jpg" alt="Microblading">
+            <div class="service-content">
+              <h3>Microblading</h3>
+              <p>Wake up to perfect brows with our expert semi-permanent solutions. Perfect brows starting at $299</p>
+              <a href="services/microblading.html" class="btn">Learn More</a>
+            </div>
+          </div>
+          
+          <div class="service-card" data-link="services/eyelashes.html">
+            <img src="eyelashes.jpg" alt="Eyelashes">
+            <div class="service-content">
+              <h3>Eyelash Extensions</h3>
+              <p>Enhance your natural beauty with full, fluttery lash extensions. Starting at $29</p>
+              <a href="services/eyelash-extensions.html" class="btn">Learn More</a>
+            </div>
+          </div>
+          
+          <div class="service-card" data-link="services/manicure.html">
+            <img src="manicure.jpg" alt="Manicure">
+            <div class="service-content">
+              <h3>Manicure</h3>
+              <p>Pamper your hands with the care and elegance they deserve. Starting at $49</p>
+              <a href="services/manicure.html" class="btn">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <section class="form-section">
+        <h2>Book an Appointment</h2>
+        <form action="https://formsubmit.co/patiesango92@gmail.com" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="_replyto" placeholder="Your Email" required>
+          <input type="text" name="phone" placeholder="Phone Number" required>
+          <select name="service" required>
+            <option value="" disabled selected>Select Service</option>
+            <option value="Hair Braiding">Hair Braiding & Extensions</option>
+            <option value="Microblading">Microblading</option>
+            <option value="Eyelashes">Eyelash Extensions</option>
+            <option value="Manicure">Manicure</option>
+          </select>
+
+          <label for="date">Preferred Date</label>
+          <input type="date" id="date" name="date" required>
+
+          <label for="time">Preferred Time:</label>
+          <select id="time" name="time" required>
+            <option value="">--Select Time--</option>
+            <option value="07:00 AM">07:00 AM</option>
+            <option value="12:00 PM">12:30 PM</option>
+          </select>
+          
+          <textarea name="message" rows="4" placeholder="Additional Notes (Optional)"></textarea>
+          <button type="submit">Submit Booking</button>
+        </form>
+      </section>
+
+      <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div id="reviews-container"></div>
+
+        <h3>Leave a Review</h3>
+        <form id="review-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" required placeholder="Your Name">
+          
+          <label for="review-text">Your Review:</label>
+          <textarea id="review-text" required placeholder="Share your thoughts..."></textarea>
+          
+          <label for="rating">Rating:</label>
+          <select id="rating" required>
+            <option value="1">★☆☆☆☆</option>
+            <option value="2">★★☆☆☆</option>
+            <option value="3">★★★☆☆</option>
+            <option value="4">★★★★☆</option>
+            <option value="5">★★★★★</option>
+          </select>
+
+          <button type="submit">Submit Review</button>
+        </form>
+      </section>
+
+      <footer>
+        <p>Contact us: patiesango92@gmail.com | +263 242 589691 | +263719980804</p>
+        <p>Corner Takawira and Tongogara, Avenues, Harare, Zimbabwe</p>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Updated JavaScript for better functionality -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const hamburger = document.querySelector('.hamburger');
       const navLinks = document.querySelector('.nav-links');
       const closeBtn = document.querySelector('.close-btn');
-      const overlay = document.querySelector('.overlay');
-      
+      const overlay = document.querySelector('.menu-overlay'); // Ensure correct overlay targeting
+
       // Toggle menu
       hamburger.addEventListener('click', () => {
         navLinks.classList.add('active');
         overlay.classList.add('active');
       });
-      
+
       // Close menu
       closeBtn.addEventListener('click', () => {
         navLinks.classList.remove('active');
         overlay.classList.remove('active');
       });
-      
+
       // Close when clicking overlay
       overlay.addEventListener('click', () => {
         navLinks.classList.remove('active');
         overlay.classList.remove('active');
       });
-      
-      // Close when clicking a link (optional)
+
+      // Close when clicking a menu link (optional)
       document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
           navLinks.classList.remove('active');
@@ -192,119 +300,7 @@
     });
   </script>
 
-  <!-- Original Content Exactly As You Had It -->
-  <div class="content-container">
-  <div class="overlay">
-    <div class="title-background">
-      <h1>The Pretty Parlor</h1>
-      <p>Where elegance meets confidence — walk in & glow out.</p>
-    </div>
-
-    <main class="container">
-      <h1>Our Services</h1>
-      
-      <div class="service-grid">
-        <div class="service-card" data-link="services/braiding-extensions.html">
-          <img src="hair-braiding.jpg" alt="Braiding">
-          <div class="service-content">
-            <h3>Hair Braiding & Extensions</h3>
-            <p>Protective, stylish, and customized braiding styles just for you. Professional braiding styles starting at $80</p>
-            <a href="services/braiding-extensions.html" class="btn">Learn More</a>
-          </div>
-        </div>
-        
-        <div class="service-card" data-link="services/microblading.html">
-          <img src="microblading.jpg" alt="Microblading">
-          <div class="service-content">
-            <h3>Microblading</h3>
-            <p>Wake up to perfect brows with our expert semi-permanent solutions. Perfect brows starting at $299</p>
-            <a href="services/microblading.html" class="btn">Learn More</a>
-          </div>
-        </div>
-        
-        <div class="service-card" data-link="services/eyelashes.html">
-          <img src="eyelashes.jpg" alt="Eyelashes">
-          <div class="service-content">
-            <h3>Eyelash Extensions</h3>
-            <p>Enhance your natural beauty with full, fluttery lash extensions. Starting at $29</p>
-            <a href="services/eyelash-extensions.html" class="btn">Learn More</a>
-          </div>
-        </div>
-        
-        <div class="service-card" data-link="services/manicure.html">
-          <img src="manicure.jpg" alt="Manicure">
-          <div class="service-content">
-            <h3>Manicure</h3>
-            <p>Pamper your hands with the care and elegance they deserve. Starting at $49</p>
-            <a href="services/manicure.html" class="btn">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <section class="form-section">
-      <h2>Book an Appointment</h2>
-      <form action="https://formsubmit.co/patiesango92@gmail.com" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="_replyto" placeholder="Your Email" required>
-        <input type="text" name="phone" placeholder="Phone Number" required>
-        <select name="service" required>
-          <option value="" disabled selected>Select Service</option>
-          <option value="Hair Braiding">Hair Braiding & Extensions</option>
-          <option value="Microblading">Microblading</option>
-          <option value="Eyelashes">Eyelash Extensions</option>
-          <option value="Manicure">Manicure</option>
-        </select>
-
-        <label for="date">Preferred Date</label>
-        <input type="date" id="date" name="date" required>
-
-        <label for="time">Preferred Time:</label>
-        <select id="time" name="time" required>
-          <option value="">--Select Time--</option>
-          <option value="07:00 AM">07:00 AM</option>
-          <option value="12:00 PM">12:30 PM</option>
-        </select>
-        
-        <textarea name="message" rows="4" placeholder="Additional Notes (Optional)"></textarea>
-        <button type="submit">Submit Booking</button>
-      </form>
-    </section>
-
-    <section class="testimonials">
-      <h2>What Our Clients Say</h2>
-      <div id="reviews-container"></div>
-
-      <h3>Leave a Review</h3>
-      <form id="review-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" required placeholder="Your Name">
-        
-        <label for="review-text">Your Review:</label>
-        <textarea id="review-text" required placeholder="Share your thoughts..."></textarea>
-        
-        <label for="rating">Rating:</label>
-        <select id="rating" required>
-          <option value="1">★☆☆☆☆</option>
-          <option value="2">★★☆☆☆</option>
-          <option value="3">★★★☆☆</option>
-          <option value="4">★★★★☆</option>
-          <option value="5">★★★★★</option>
-        </select>
-
-        <button type="submit">Submit Review</button>
-      </form>
-    </section>
-
-    <footer>
-      <p>Contact us: patiesango92@gmail.com | +263 242 589691 | +263719980804</p>
-      <p>Corner Takawira and Tongogara, Avenues, Harare, Zimbabwe</p>
-    </footer>
-  </div>
- </div>
-  
-
-  <script src="assets/js/reviews.js"></script> 
+  <script src="assets/js/reviews.js"></script>
   
   <script>
     document.getElementById('review-form').addEventListener('submit', async function(e) {
