@@ -6,6 +6,36 @@
   <title>Manicure | The Pretty Parlor</title>
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/services.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: 
+        linear-gradient(rgba(255, 183, 212, 0.8), rgba(255, 183, 212, 0.8)),
+        url('../manicure.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+    
+    .page-banner {
+      width: 100%;
+      height: 450px;
+      overflow: hidden;
+    }
+    
+    .page-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .service-page {
+      background-color: rgba(255, 255, 255, 0.9);
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
 <header>
@@ -20,6 +50,11 @@
 </header>
 
   <main class="service-page">
+    <!-- Page Banner Section -->
+    <section class="page-banner">
+      <img src='../manicure.jpg' alt="Professional manicure services">
+    </section>
+    
     <section class="hero manicure-hero">
       <h1>Manicure</h1>
       <p class="price-range">Starting at $10 | 1 - 2 Hours</p>
@@ -27,16 +62,15 @@
     </section>
 
     <section class="service-options">
-
       <div class="option-card">
         <h3>Luxury Manicures</h3>
         <select id="manicure-type">
-      <option value="classic">Gel Set ($20)</option>
-      <option value="volume">Acrylic Set ($12)</option>
-      <option value="hybrid">Stickon Set ($10)</option>
-      <option value="volume">Extras Nail Art  ($10-$25)</option>
-      <option value="hybrid">Extras Paraffin Wax ($10-$15)</option>
-    </select>
+          <option value="classic">Gel Set ($20)</option>
+          <option value="volume">Acrylic Set ($12)</option>
+          <option value="hybrid">Stickon Set ($10)</option>
+          <option value="volume">Extras Nail Art ($10-$25)</option>
+          <option value="hybrid">Extras Paraffin Wax ($10-$15)</option>
+        </select>
       </div>
 
       <button class="book-now" data-service="Manicure">Book Now</button>
@@ -44,10 +78,10 @@
 
     <section class="manicure-aftercare">
       <h2>Aftercare Kit Included</h2>
-    <ul>
-      <li>🧴 Clear Top Coat</li>
-      <li>🖌️ Nail Glue</li>
-      <li>📖 Care instructions</li>
+      <ul>
+        <li>🧴 Clear Top Coat</li>
+        <li>🖌️ Nail Glue</li>
+        <li>📖 Care instructions</li>
       </ul>
     </section>
   </main>
