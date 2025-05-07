@@ -2,7 +2,7 @@
     .header {
       position: relative;
       padding: 1rem;
-      background: #fff;
+      background: rgba(255, 183, 212, 0.4);
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     
