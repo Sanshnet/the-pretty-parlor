@@ -8,13 +8,63 @@
   <style> 
    
     body {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background: url('beauty-salon.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #333;
-    }
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: url('beauty-salon.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  /* Hot pink accents for interactive elements */
+  --hot-pink: #ff2d6b;  /* Vibrant hot pink */
+  --deep-pink: #e6005c; /* Darker shade for contrast */
+  --soft-white: #fff5f9; /* Blush background tint */
+}
 
+/* Elegant headings with hot pink */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: var(--hot-pink); /* Hot pink headers */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Subtle depth */
+}
+
+/* Stylish pink buttons */
+button, .cta-button {
+  background: var(--hot-pink);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 30px; /* Rounded edges */
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: var(--deep-pink);
+}
+
+/* Pink links for emphasis */
+a {
+  color: var(--hot-pink);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Optional: Add a semi-transparent overlay to improve text readability */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 245, 249, 0.3); /* Soft pink overlay (adjust opacity) */
+  z-index: -1; /* Places it between the BG image and content */
+}
     .overlay {
       background-color: rgba(255, 183, 212, 0.4);
       padding: 40px 20px;
